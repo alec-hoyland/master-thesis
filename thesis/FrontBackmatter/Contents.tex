@@ -1,0 +1,94 @@
+%*******************************************************
+% Table of Contents
+%*******************************************************
+\pagestyle{scrheadings}
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+% \pagestyle{empty} % Uncomment this line if your lists should not have any headlines with section name and page number
+\begingroup
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listfigurename}
+    \pdfbookmark[1]{\listfigurename}{lof}
+    \listoffigures
+
+    \vspace{8ex}
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listtablename}
+    \pdfbookmark[1]{\listtablename}{lot}
+    \listoftables
+
+    \vspace{8ex}
+    % \newpage
+
+    %*******************************************************
+    % List of Listings
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\lstlistlistingname}
+    \pdfbookmark[1]{\lstlistlistingname}{lol}
+    \lstlistoflistings
+
+    \vspace{8ex}
+
+    %*******************************************************
+    % Acronyms
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    \pdfbookmark[1]{Acronyms}{acronyms}
+    \markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+    \chapter*{Acronyms}
+    \begin{acronym}[UMLX]
+    	\acro{AB}{anterior burster cell}
+    	\acro{CCAP}{crustacean cardioactive peptide}
+    	\acro{CoG}{commissural ganglion}
+    	\acro{CPG}{central pattern generator}
+    	\acro{IC}{inferior cardiac cell}
+    	\acro{INa}[I\textsubscript{Na}]{fast sodium current}
+    	\acro{ICaT}[I\textsubscript{CaT}]{fast transient calcium current}
+    	\acro{ICaS}[I\textsubscript{CaS}]{slow calcium current}
+    	\acro{IA}[I\textsubscript{A}]{fast transient potassium current}
+    	\acro{IKCa}[I\textsubscript{KCa}]{calcium-dependent potassium current}
+    	\acro{IKd}[I\textsubscript{Kd}]{delayed rectifier potassium current}
+    	\acro{IH}[I\textsubscript{H}]{hyperpolarization-activated mixed-cation inward current}
+    	\acro{Ileak}[I\textsubscript{leak}]{passive ion leak current}
+    	\acro{IMI}[I\textsubscript{MI}]{modulatory input current}
+    	\acro{Iglut}[I\textsubscript{glut}]{glutamatergic synaptic current}
+    	\acro{Ichol}[I\textsubscript{chol}]{cholinergic synaptic current}
+    	\acro{LP}{lateral pyloric cell}
+    	\acro{OG}{oesophageal ganglion}
+    	\acro{PD}{pyloric dilator cell}
+    	\acro{PY}{pyloric cell}
+    	\acro{RPCH}{red pigment-concentrating hormone}
+    	\acro{STG}{stomatogastric ganglion}
+    	\acro{STNS}{stomatogastric nervous system}
+    	\acro{TTX}{tetrodotoxin}
+    	\acro{VD}{ventricular dilator cell}
+    \end{acronym}
+
+\endgroup
