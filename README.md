@@ -5,5 +5,4 @@ Master of Science in Neuroscience, Brandeis University, 2018
 
 You can build the document from source or view the PDF at `master-thesis/thesis/ClassicThesis.pdf`. The BIR folder contains the version formatted for the Brandeis Institutional Repository.      
 
-
-
+> This thesis was written in LaTeX using the `classic-thesis` theme by Andre Miede.
